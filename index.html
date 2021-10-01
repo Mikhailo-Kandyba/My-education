@@ -8,7 +8,6 @@
         <link rel="stylesheet" href="css/styles.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
         <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
-        <meta name="theme-color" content="#ffffff">
     </head>
     <body>
         <div id="wrapper">
@@ -165,11 +164,10 @@
                         </dd>
                         <dt class="question">ЧТо такое переменные в браузере?</dt>
                         <dd class="answer">
-                            <strong>Переменные</strong> — это контейнер для хранения информации<br>
-                            <strong>пример;</strong><br>
-                            let message;<br>
-                            message = 'Hello!';<br>
-                            alert(message); // показывает содержимое переменной
+                            &lt;!--#echo var="переменная"--&gt;<br>
+                            Когда браузер запрашивает от веб-сервера документ, он также пересылает на сервер техническую информацию
+                            об определённых параметрах браузера и операционной системы. Веб-сервер в свою очередь одновременно с документом возвращает некоторые свои характеристики.
+                            Таким образом, браузер и веб-сервер обмениваются данными, которые называются переменные окружения. Эти переменные можно применять в своих целях и отображать их на веб-странице.
                         </dd>
                         <dt class="question">Фиксируванная верстка</dt>
                         <dd class="answer">
@@ -218,11 +216,9 @@
                         <dt class="question">В чем разница между записью #my и .my?</dt>
                         <dd class="answer">
                             <strong>#my - селектор ай-ди.</strong><br>
-                            <strong>пример;</strong><br>
-                            id="wrapper"<br>
+                            должен быть уникальным, встречаеться только раз в HTML
                             <strong>.my - селектор класса.</strong><br>
-                            <strong>пример;</strong><br>
-                            class="question"<br>
+                            может повторяться HTML неограничено
                         </dd>
                         <dt class="question">В чем разница между margin и padding?</dt>
                         <dd class="answer">
@@ -500,7 +496,7 @@
                         </dd>
                         <dt class="question">Есть ли у тегов предопределённые стили?</dt>
                         <dd class="answer">
-                            Есть, у input.
+                            Есть, у input, button, textarea, списки(ol, ul, dl)
                         </dd>
                         <dt class="question">Как повлиять на вертикальное выравнивание строчного элемента?</dt>
                         <dd class="answer">
@@ -570,6 +566,7 @@
                         <dt class="question">Какие из препроцессоров вы знаете?</dt>
                         <dd class="answer">
                             sass(scss), less
+                            <strong>LESS</strong> можно включать в определение свойства других классов. Собственно класс и является миксином.
                         </dd>
                         <dt class="question">Что такое размер viewport?</dt>
                         <dd class="answer">
