@@ -179,7 +179,7 @@ h6 {
         min-width: inherit;
         text-align: center; } }
     .menu-navigation-wrap .menu-navigation li {
-      padding: 0 30px; }
+      padding-left: 70px; }
       @media only screen and (max-width: 767px) {
         .menu-navigation-wrap .menu-navigation li {
           position: relative;
@@ -199,10 +199,13 @@ h6 {
         -o-background: linear-gradient(45deg, #9dcbff 31%, #69fbff);
         background: linear-gradient(45deg, #9dcbff 31%, #69fbff);
         border-radius: 50px;
-        padding: 20px;
+        padding: 20px 40px;
         position: absolute;
         left: 0;
         top: 30px; }
+      .menu-navigation-wrap .menu-navigation .summary-item .summary-list li {
+        padding-left: 0;
+      }
         @media only screen and (max-width: 767px) {
           .menu-navigation-wrap .menu-navigation .summary-item .summary-list {
             display: block;
@@ -213,7 +216,7 @@ h6 {
           .menu-navigation-wrap .menu-navigation .summary-item .summary-list li {
             border-bottom: 1px solid #000;
             border-top: 1px solid #000; } }
-      .menu-navigation-wrap .menu-navigation .summary-item a {
+      .menu-navigation-wrap .menu-navigation .summary-item span {
         padding-bottom: 20px; }
         @media only screen and (max-width: 767px) {
           .menu-navigation-wrap .menu-navigation .summary-item a {
