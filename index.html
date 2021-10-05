@@ -115,7 +115,7 @@
                         </dd>
                         <dt class="question">Что пишут в теге HEAD?</dt>
                         <dd class="answer">
-                            <ol>
+                            <ul>
                                 <li>
                                     Тег <strong>title</strong> Это очень важный тег, особенно с точки зрения SEO. Как он прописывается? С помощью тегов &lt;title&gt;&lt;/title&gt;.
                                     То есть получается примерно так: &lt;title&gt;Название вашего веб-документа&lt;/title&gt;;
@@ -132,7 +132,7 @@
                                     с указанием типа языка и внутри них или пишется код скрипта, или к тегу script
                                     прописывается атрибут src, в котором указывается путь к скрипту.
                                 </li>
-                            </ol>
+                            </ul>
                         </dd>
                         <dt class="question">Зачем нужны теги &lt;dl&gt;,&lt;dt&gt;,&lt;dd&gt;? </dt>
                         <dd class="answer">
@@ -423,6 +423,12 @@
                                         padding: 3px; }
                                     </p>
                                 </li>
+                                <li>
+                                    <h3> :last-child</h3>
+                                    <p>
+                                        задает стилевое оформление последнего элемента своего родителя.
+                                    </p>
+                                </li>
                             </ul>
                         </dd>
                         <dt class="question"> Псевэлемент</dt>
@@ -664,9 +670,133 @@
                             CSS свойство flex-basis задаёт базовый размер флекс элемента по основной оси. Это свойство определяет размер контент-бокса, если не задано иначе через box-sizing.<br>
                             <strong>Внимание:</strong> в случае, если для элемента одновременно заданы flex-basis (отличное от auto) и width ( или height в случае flex-direction: column), flex-basis имеет приоритет.
                         </dd>
-                        <dt class="question">flex-grow</dt>
+                        <dt class="question">flex-shrink</dt>
                         <dd class="answer">
-                            управляет свободным пространством у родительського блока
+                           <strong>flex-shrink</strong>  определяет способность гибкого элемента сжиматься при необходимости. Значение должно быть положительным числом.
+                        </dd>
+                        <dt class="question">flex</dt>
+                        <dd class="answer">
+                            Это сокращение для использования <strong>flex-grow</strong>, <strong>flex-shrink</strong> и <strong>flex-basis</strong> вместе.<br>
+                            <strong>пример:</strong><br>
+                            .item {<br>
+                            flex: none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]<br>
+                            }
+                        </dd>
+                        <dt class="question">flex-flow</dt>
+                        <dd class="answer">
+                            flex-flow — это сокращение для flex-direction и flex-wrap свойств
+                            <strong>пример:</strong><br>
+                            container {<br>
+                            flex-flow: row-reverse wrap;<br>
+                            }
+                        </dd>
+                        <dt class="question">align-self</dt>
+                        <dd class="answer">
+                            <strong>align-self</strong> позволяет переопределить выравнивание по умолчанию (или указанное с помощью align-items) для отдельных элементов flex.
+                            <strong>пример:</strong><br>
+                            <div class="img-area">
+                                <img src="./images/align-self.png" alt="align-self">
+                            </div>
+                            <div class="img-area">
+                                <img src="./images/align-self-2.png" alt="align-self">
+                            </div>
+                        </dd>
+                        <dt class="question">align-content</dt>
+                        <dd class="answer">
+                            align-сontent  выравнивает линии в пределах flex контейнера, когда есть дополнительное пространство на поперечной оси
+                        </dd>
+                        <dt class="question">text-align</dt>
+                        <dd class="answer">
+                            влияет не только на текст, но и на все строчные и строчно-блочные элементы, содержащиеся в контейнере.
+                        </dd>
+                        <dt class="question">Выравнивание блочных элементов</dt>
+                        <dd class="answer">
+                            <div class="img-area">
+                                <img src="./images/block.png" alt="block">
+                            </div>
+                            <div class="img-area">
+                                <img src="./images/block-2.png" alt="block">
+                            </div>
+                        </dd>
+                        <dt class="question">Выравнивание блочных элементов</dt>
+                        <dd class="answer">
+                            <div class="img-area">
+                                <img src="./images/block.png" alt="block">
+                            </div>
+                            <div class="img-area">
+                                <img src="./images/block-2.png" alt="block">
+                            </div>
+                            <h3>Использовать абсолютное позиционирование элемента + margin</h3>
+                            <div class="img-area">
+                                <img src="./images/position.png" alt="position">
+                            </div>
+                            <h3>Использование свойства transform со значением translate – 50%</h3>
+                            <p>
+                                Если ширина и высота элемента неизвестны, вы можете использовать свойство transform с отрицательным значением translate – 50% в обоих направлениях (он основывается на текущей ширине / высоте элемента) для центрирования:
+                            </p>
+                            <div class="img-area">
+                                <img src="./images/transform.png" alt="transform">
+                            </div>
+                        </dd>
+                        <dt class="question">Выравнивание строчных элементов</dt>
+                        <dd class="answer">
+                            вертикальное выравнивание для строчного элемента внутри содержащей его строки или ячейки таблицы<br>
+                            <strong>vertical-align</strong><br>
+                            <div class="img-area">
+                                <img src="./images/vertical.png" alt="vertical">
+                            </div>
+                            <div class="img-area">
+                                <img src="./images/vertical-2.png" alt="vertical">
+                            </div>
+                            <h3>Пример выравнивания по вертикали в ячейках таблицы:</h3>
+                            <div class="img-area">
+                                <img src="./images/vertical-3.png" alt="vertical">
+                            </div>
+                        </dd>
+                        <dt class="question">Фильтры</dt>
+                        <dd class="answer">
+                            вертикальное выравнивание для строчного элемента внутри содержащей его строки или ячейки таблицы<br>
+                            <strong>vertical-align</strong><br>
+                            <div class="img-area">
+                                <img src="./images/vertical.png" alt="vertical">
+                            </div>
+                            <div class="img-area">
+                                <img src="./images/vertical-2.png" alt="vertical">
+                            </div>
+                            <h3>Пример выравнивания по вертикали в ячейках таблицы:</h3>
+                            <div class="img-area">
+                                <img src="./images/vertical-3.png" alt="vertical">
+                            </div>
+                        </dd>
+                        <dt class="question">Переходы (Transitions)</dt>
+                        <dd class="answer">
+                            <ul>
+                                <li><strong>skewX()</strong>- наклоняет элемент вдоль оси X на заданный угол.</li>
+                                <li><strong>skewY()</strong>- наклоняет элемент вдоль оси У на заданный угол.</li>
+                                <li><strong>skew()</strong>- наклоняет элемент вдоль оси X и Y на заданные углы.</li>
+                            </ul>
+                            <strong>пример:</strong><br>
+                            <div class="img-area">
+                                <img src="./images/skew-1.png" alt="skew">
+                            </div>
+                            <div class="img-area">
+                                <img src="./images/skew-2.png" alt="skew">
+                            </div>
+                        </dd>
+                        <dt class="question">3D трансформации</dt>
+                        <dd class="answer">
+                            <div class="card-flipper">
+                                <div class="card card-front"> Html </div>
+                                <div class="card card-back"> HTML card back </div>
+                            </div>
+                            <div class="card-flipper">
+                                <div class="card card-front"> CSS </div>
+                                <div class="card card-back"> CSS card back </div>
+                            </div>
+                            <div class="card-flipper">
+                                <div class="card card-front"> JS </div>
+                                <div class="card card-back"> JS card back </div>
+                            </div>
                         </dd>
                     </dl>
                 </section>
