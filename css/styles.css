@@ -357,3 +357,11 @@ fieldset {
 .card-flipper:hover {
   transform: rotateY(180deg);
 }
+
+#js .title-block h1 {
+  margin-bottom: 0;
+}
+
+#js .question strong {
+  color: red;
+}

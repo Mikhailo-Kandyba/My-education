@@ -28,6 +28,9 @@
                                 <li>
                                     <a href="#web">Основы WEB</a>
                                 </li>
+                                <li>
+                                    <a href="#js">JavaScript</a>
+                                </li>
                                 <li class="summary-item">
                                     <span>Summary</span>
                                     <ul class="summary-list">
@@ -869,6 +872,149 @@
                         <dt class="question">Дайте определение понятиям "авторизация" и "аутентификация", в чем их различия?</dt>
                         <dd class="answer">
                             <strong>Аутентификация</strong>- это проверка соответствия субъекта и того, за кого он пытается себя выдать, в простейшем случае - с помощью имени входа и пароля.
+                        </dd>
+                    </dl>
+                </section>
+                <section id="js" class="container block-area">
+                    <div class="title-block">
+                        <h1>JavaScript</h1>
+                    </div>
+                    <dl>
+                        <dt class="question">
+                            атрибут <strong>async</strong>
+                        </dt>
+                        <dd class="answer">
+                            При нахождении script async src=""> браузер не останавливает отображения страницы, скрипт подгружается асинхронно и будет выполнен, как только загрузится.
+                        </dd>
+                        <dt class="question">
+                            атрибут <strong>defer</strong>
+                        </dt>
+                        <dd class="answer">
+                            При нахождении script defer src=""> браузер работает асинхронно, подобно атрибуту async, но с двумя отличиями: сохраняется порядок выполнения скриптов; скрипт с атрибутом defer выполнится, когда вся веб страница будет обработана браузером.
+                        </dd>
+                        <dd class="answer">
+                            Атрибуты async / defer можно использовать только вместе с атрибутом src, то есть только для подключения внешних скриптов.
+                        </dd>
+                        <dt class="question">
+                            Переменная
+                        </dt>
+                        <dd class="answer">
+                            это ячейка памяти (контейнер), которая используется для хранения значений данных. Для объявления переменной используется ключевое слово let.<br>
+                            <strong>пример</strong><br>
+                            let  myVar;<br>
+                            myVar  =  1;<br>
+                            alert(myVar);
+                        </dd>
+                        <dt class="question">
+                            Идентификатор
+                        </dt>
+                        <dd class="answer">
+                            — это имя переменной, функции, класса или другого элемента языка. Идентификаторы должны начинаться с букв, знака доллара ($) или со знака подчеркивания (_). Так же могут содержать цифры и, если нужно, символы (Unicode).
+                        </dd>
+                        <dt class="question">
+                            Литералы
+                        </dt>
+                        <dd class="answer">
+                            Переменная в коде инициализируется некоторым значением<br>
+                            <strong>пример</strong><br>
+                            10<br>
+                            "Пример литерала"<br>
+                            литерал<br>
+                            [ 'A', 'B']<br>
+                            {Name: "Serhii", role: "trainer"}
+                        </dd>
+                        <dt class="question">
+                            Константа
+                        </dt>
+                        <dd class="answer">
+                            Константа должна быть обязательно инициализирована сразу при ее объявлении.<br>
+                            <strong>пример</strong><br>
+                            const PI = 3.1416;<br>
+                            const PI;<br>
+                            PI = 3.1416;
+                        </dd>
+                        <dt class="question">
+                            Типы данных
+                        </dt>
+                        <dd class="answer">
+                            <ol>
+                                <li>Undefined - неопределенный</li>
+                                <li>Null - ноль</li>
+                                <li>Boolean - логический</li>
+                                <li>Number - номер</li>
+                                <li>Biglnt - большой</li>
+                                <li>String - строка</li>
+                                <li>Symbol - символ</li>
+                                <li>Object - обект</li>
+                                <li>Function - функция</li>
+                            </ol>
+                        </dd>
+                        <dt class="question">
+                            Условный оператор <strong>if</strong>
+                        </dt>
+                        <dd class="answer">
+                            <strong>при определенному статусу выводится значения в консоль</strong><br>
+                            const  courseStatus = 'ready';<br>
+
+                            if (courseStatus === 'ready') {<br>
+                            console.log('Курс уже готов и его можно проходить')<br>
+                            }<br>
+
+                            if (courseStatus === 'pending') {<br>
+                            console.log('Курс находится в процессе разработки')<br>
+                            }<br>
+                            <strong>оптимизация кода, добавления <i>else</i></strong><br>
+                            const  courseStatus = 'fail';<br>
+                            if (courseStatus === 'ready') {<br>
+                            console.log('Курс уже готов и его можно проходить')<br>
+                            } else if (courseStatus === 'pending') {<br>
+                            console.log('Курс находится в процессе разработки')<br>
+                            } else {<br>
+                            console.log('Курс провален')<br>
+                            }<br>
+                        </dd>
+                        <dt class="question">
+                            Булевая логика
+                        </dt>
+                        <dd class="answer">
+                            <a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Guide/Expressions_and_Operators">Булевая логика</a>
+                        </dd>
+                        <dt class="question">
+                            Функции
+                        </dt>
+                        <dd class="answer">
+                            Нужны для оптимезации и не дублировать код
+                        </dd>
+                        <dt class="question">
+                            Числа
+                        </dt>
+                        <dd class="answer">
+                            const nam = 42;//integer<br>
+                            const float = 42.42;//float<br>
+                            const pow = 10e3;//добавляем степень<br>
+                            console.log(pow);
+                        </dd>
+                        <dt class="question">
+                            prototype
+                        </dt>
+                        <dd class="answer">
+                            это определенный обьект который присуцтвует у обектов и он вызывается по целочке с верху в низ<br>
+                            <strong>пример:</strong><br>
+                            const person = new Object({<br>
+                            name: 'Mikhailo',<br>
+                            age: 23,<br>
+                            greet: function () {<br>
+                            console.log('Greet')<br>
+                            }<br>
+                            });<br>
+                            Object.prototype.sayHello = function() {<br>
+                            console.log('Hello')<br>
+                            };<br>
+                            const lena = Object.create(person);<br>
+                            lena.age = 25;<br>
+                            lena.greet = function () {<br>
+                            console.log('lena hello')<br>
+                            };<br>
                         </dd>
                     </dl>
                 </section>
